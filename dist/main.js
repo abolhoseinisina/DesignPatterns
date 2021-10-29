@@ -1,3 +1,3 @@
 "use strict";
-let helloWorld = "Hello world";
+let helloWorld = "Hello World!";
 console.log(helloWorld);
