@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Composite_1 = require("./Composite");
+const LEAF_A = new Composite_1.Leaf('leaf-a');
+const LEAF_B = new Composite_1.Leaf('leaf-b');
+const COMPOSITE_1 = new Composite_1.Composite('comp-1');
+const COMPOSITE_2 = new Composite_1.Composite('comp-2');
+COMPOSITE_1.attach(LEAF_A);
+COMPOSITE_2.attach(LEAF_A);
+COMPOSITE_2.attach(COMPOSITE_1);
+LEAF_B.method();
+COMPOSITE_2.method();
