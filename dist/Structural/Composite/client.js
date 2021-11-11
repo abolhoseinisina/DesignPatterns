@@ -10,3 +10,5 @@ COMPOSITE_2.attach(LEAF_A);
 COMPOSITE_2.attach(COMPOSITE_1);
 LEAF_B.method();
 COMPOSITE_2.method();
+COMPOSITE_1.detach();
+COMPOSITE_2.method();
