@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const DataModel_1 = require("./DataModel");
+const DataView_1 = require("./DataView");
+const DataController_1 = require("./DataController");
+const dataModel = new DataModel_1.DataModel();
+const pieGraph = new DataView_1.PieGraph(dataModel);
+const barGraph = new DataView_1.BarGraph(dataModel);
+const table = new DataView_1.Table(dataModel);
+const dataController = DataController_1.DataController.getInstance();
+dataController.notify(1, 7, 3);
+pieGraph.delete();
+dataController.notify(9, 2, 6);
