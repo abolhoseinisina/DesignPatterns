@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Interpreter_1 = require("./Interpreter");
+const sentence = '5 + 4 - 2';
+console.log(`sentence: ${sentence}`);
+let TOKENS = sentence.split(' ');
+const AST = [];
+AST.push(new Interpreter_1.Add(new Interpreter_1.Numeral(TOKENS[0]), new Interpreter_1.Numeral(TOKENS[2])));
+AST.push(new Interpreter_1.Subtract(AST[0], new Interpreter_1.Numeral(TOKENS[4])));
+let AST_ROOT = AST.pop();
+console.log(AST_ROOT.interpret());
+console.dir(AST_ROOT, { depth: null });
