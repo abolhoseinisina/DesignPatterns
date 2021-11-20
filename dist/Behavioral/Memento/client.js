@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Memento_1 = require("./Memento");
+let originator = new Memento_1.Originator();
+let careTaker = new Memento_1.CareTaker(originator);
+originator.state = 'state 1';
+originator.state = 'state 2';
+careTaker.create();
+originator.state = 'state 3';
+careTaker.create();
+originator.state = 'state 4';
+console.log(originator.state);
+careTaker.restore(0);
+console.log(originator.state);
+careTaker.restore(1);
+console.log(originator.state);
