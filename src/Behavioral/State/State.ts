@@ -3,19 +3,19 @@ interface IState {
 }
 
 class ConcreteStateA implements IState {
-    toString(){
+    toString() {
         console.log('I am Concrete State A')
     }
 }
 
 class ConcreteStateB implements IState {
-    toString(){
+    toString() {
         console.log('I am Concrete State B')
     }
 }
 
 class ConcreteStateC implements IState {
-    toString(){
+    toString() {
         console.log('I am Concrete State C')
     }
 }
