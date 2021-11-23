@@ -7,11 +7,11 @@ You will find a familiarity with Design Patterns very useful when planning, disc
 You will learn these Design Patterns
 
 1. Creational
-Factory
-Abstract Factory
-Builder
-Prototype
-Singleton
+a. Factory
+b. Abstract Factory
+c. Builder
+d. Prototype
+e. Singleton
 2. Structural
 Decorator
 Adapter
